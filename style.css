@@ -1,5 +1,89 @@
+:root {
+    --nav_bar_height: 60px;
+}
+
 *,
 *::before,
 *::after {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
 }
+
+#nav_bar {
+    position: sticky;
+    height: var(--nav_bar_height);
+    line-height: var(--nav_bar_height);
+    width: 100%;
+    background: #7395AE;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav_bar_left:hover, .nav_bar_link:hover, #menu:hover {
+    background-color: #557a95;
+    cursor: pointer;
+}
+
+#nav_bar_left {
+    padding-inline: 50px;
+}
+
+#nav_bar_right {
+    display: flex;
+    
+}
+
+#links {
+    display: flex;
+}
+
+#menu {
+    padding-top: 10px;
+    padding-inline: 15px;
+    display: inline-block;
+} 
+
+.menu_bar_1, .menu_bar_2, .menu_bar_3 {
+    width: 30px;
+    height: 4px;
+    border: 1px solid black;
+    border-radius: 50px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.nav_bar_link {
+    padding-inline: 50px;
+    width: 100%;
+    transition: 0.4s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.transform .menu_bar_1{
+    transform: translate(0px, 17px) rotate(-30deg); 
+}
+
+/* Fade out the second bar */
+.transform .menu_bar_2 {
+    opacity: 0;
+}
+
+/* Rotate last bar */
+.transform .menu_bar_3 {
+  transform: translate(0px, -17px) rotate(30deg);
+}
+
+.transform div {
+    visibility: visible;
+    opacity: 100%; 
+}
+
+
+
