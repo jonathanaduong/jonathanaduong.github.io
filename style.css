@@ -10,11 +10,21 @@
     padding: 0;
     font-size: 20px;
     text-decoration: none;
+    font-family: Oswald;
     color: white;
+    transition: 0.3s;
 }
 
+html {
+    background-color: black;
+    height: 200%;
+}
+
+/* Navbar Styling*/
 #nav_bar {
     position: sticky;
+    top: 0;
+    left: 0;
     height: var(--nav_bar_height);
     line-height: var(--nav_bar_height);
     width: 100%;
@@ -30,7 +40,11 @@
 }
 
 #nav_bar_left {
-    padding-inline: 50px;
+    padding-inline: 40px;
+}
+
+#nav_bar_left > p {
+    font-size: 30px;
 }
 
 #nav_bar_right {
@@ -43,31 +57,30 @@
 }
 
 #menu {
-    padding-top: 10px;
+    padding-top: 12px;
     padding-inline: 15px;
     display: inline-block;
 } 
 
 .menu_bar_1, .menu_bar_2, .menu_bar_3 {
     width: 30px;
-    height: 4px;
-    border: 1px solid black;
+    height: 3px;
     border-radius: 50px;
     background-color: white;
     margin: 6px 0;
-    transition: 0.4s;
 }
 
 .nav_bar_link {
-    padding-inline: 50px;
+    padding-inline: 40px;
     width: 100%;
-    transition: 0.4s;
     visibility: hidden;
     opacity: 0;
+    translate: 50px;
 }
 
 .transform .menu_bar_1{
-    transform: translate(0px, 17px) rotate(-30deg); 
+    width: 20px;
+    transform: translate(7px, 15px) rotate(-40deg); 
 }
 
 /* Fade out the second bar */
@@ -77,13 +90,47 @@
 
 /* Rotate last bar */
 .transform .menu_bar_3 {
-  transform: translate(0px, -17px) rotate(30deg);
+    width: 20px;
+    transform: translate(7px, -15px) rotate(40deg);
 }
 
-.transform div {
+.transform .nav_bar_link {
     visibility: visible;
-    opacity: 100%; 
+    opacity: 1;
+    transform: translate(-50px);
 }
 
+/* Projects Styling */
 
+#gallery {
+    height: 350px;
+    width: 100%;
+    background-color: gold;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-inline: 20px;
+}
+
+.gallery_project {
+    height: 250px;
+    width: 250px;
+    background-color: red;
+}
+
+.gallery_project:hover {
+    cursor: pointer;
+    height: 275px;
+    width: 275px;
+}
+
+#project_section {
+    width: 100%;
+    padding: 40px;
+    background-color: green;
+}
+
+#project_title {
+    font-size: 40px;
+}
 
